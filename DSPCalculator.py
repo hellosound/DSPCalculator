@@ -36,29 +36,36 @@ def nyquist_frequency():
 
 
 def main():
-    print("Welcome to the DSP Development Tool!\n")
-    print("Select a tool to use:")
-    print("1. Frequency to MIDI Note Converter")
-    print("2. Sample to Milliseconds Converter")
-    print("3. Decibels to Linear Amplitude Converter")
-    print("4. Delay Time Calculator")
-    print("5. Nyquist Frequency Checker")
+    while True: 
 
-    choice = int(input("\nEnter the number of the tool you want to use: "))
+        print("\nWelcome to the DSP Calculator Tool!\n")
+        print("Select a tool to use:")
+        print("1. Frequency to MIDI Note Converter")
+        print("2. Sample to Milliseconds Converter")
+        print("3. Decibels to Linear Amplitude Converter")
+        print("4. Delay Time Calculator")
+        print("5. Nyquist Frequency Checker")
+        print("0. Exit")
 
-    if choice == 1:
-        frequency_to_midi()
-    elif choice == 2:
-        sample_to_milliseconds()
-    elif choice == 3:
-        decibels_to_linear()
-    elif choice == 4:
-        delay_time_calculator()
-    elif choice == 5:
-        nyquist_frequency()
+        choice = int(input("\nEnter the number of the tool you want to use: "))
+
+        if choice == 1:
+            frequency_to_midi()
+        elif choice == 2:
+            sample_to_milliseconds()
+        elif choice == 3:
+            decibels_to_linear()
+        elif choice == 4:
+            delay_time_calculator()
+        elif choice == 5:
+            nyquist_frequency()
+        elif choice == 0:
+            print("Thank you for using the DSP Calculator Tool!")
+            break
 
     else:
         print("Invalid choice. Please select a valid tool.")
+
 
 #Check if script is being run as a module or directly
 if __name__ == "__main__":
